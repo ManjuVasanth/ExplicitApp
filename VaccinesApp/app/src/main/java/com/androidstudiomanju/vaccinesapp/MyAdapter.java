@@ -21,7 +21,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public void setClickListener(ItemClickListener clickListener) {
-        this.clickListener = clickListener;
+
     }
 
     // 2. View holder class
