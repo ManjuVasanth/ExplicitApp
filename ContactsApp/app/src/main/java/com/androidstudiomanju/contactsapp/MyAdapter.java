@@ -10,11 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
-    private ContactsModal[] listdata;
+    private ContactsModal[] listData;
     private ItemClickListener clickListener;
 
-    public MyAdapter(ContactsModal[] listdata) {
-        this.listdata = listdata;
+    public MyAdapter(ContactsModal[] listData) {
+        this.listData = listData;
     }
 
     public void setClickListener(ItemClickListener clickListener) {
@@ -58,15 +58,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-            final ContactsModal myListData = listdata[position];
-            holder.nametextView.setText(listdata[position].getContactName());
-            holder.numbertextView.setText(listdata[position].getContactNumber());
-            holder.imageView.setImageResource(listdata[position].getContactImage());
+            final ContactsModal myListData = listData[position];
+            holder.nametextView.setText(listData[position].getContactName());
+            holder.numbertextView.setText(listData[position].getContactNumber());
+            holder.imageView.setImageResource(listData[position].getContactImage());
         }
 
         @Override
         public int getItemCount() {
-            return listdata.length;
+            return listData.length;
         }
     }
 

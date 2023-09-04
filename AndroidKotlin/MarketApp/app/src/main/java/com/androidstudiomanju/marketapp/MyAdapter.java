@@ -41,13 +41,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-
         return itemList.length;
     }
 
     // 2. ViewHolder class
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public ImageView imageView;
         public TextView textView;
         public TextView iTextView;
@@ -64,6 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             if(clickListener!=null){
                 clickListener.onClick(v,getAdapterPosition());
             }
+
 
         }
     }
